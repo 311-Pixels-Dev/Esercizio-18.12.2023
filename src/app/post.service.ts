@@ -7,7 +7,7 @@ import { Posts } from './models/PostModels';
 })
 export class PostService {
 
-  public async getPosts():Promise<Array<Posts>{
+  public async getPosts():Promise<Array<Posts>>{
     axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
 
     let res = await axios.get("http://localhost:8090/api/collections/posts/records");
